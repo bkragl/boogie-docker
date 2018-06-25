@@ -11,5 +11,8 @@ docker build -t boogie .
 **Run:**
 
 ```bash
-docker run boogie
+docker run -it boogie
 ```
+
+This starts an interactive Bash shell with the `boogie` command ready to run on
+any of the programs in the Boogie test suite.

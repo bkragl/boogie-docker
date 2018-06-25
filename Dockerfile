@@ -12,4 +12,8 @@ RUN curl -LO https://github.com/boogie-org/boogie/archive/master.zip \
  && msbuild /p:Configuration=Release boogie/Source/Boogie.sln \
  && ln -s $PWD/z3*/bin/z3 boogie/Binaries/z3.exe
 
-CMD ["mono","boogie/Binaries/Boogie.exe","boogie/Test/textbook/McCarthy-91.bpl"]
+COPY boogie /usr/local/bin
+
+WORKDIR boogie/Test
+
+CMD ["bash"]
